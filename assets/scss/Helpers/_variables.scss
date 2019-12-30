@@ -1,0 +1,42 @@
+/*=============---------------------------==============*/
+/*               	  Color Variables  		            */
+/*=============---------------------------==============*/
+
+//Color
+
+$black:#222222;
+$white: #ffffff;
+$border: #acafb1 ;
+$n-white: #f7f7f7;
+$n-black: #6d6d6d;
+$green: #008b37;
+$red: #ed174f;
+$orange: #f86923;
+
+
+$n-border: rgb(239, 239, 239);
+$primary-color: #B61D8D;
+$primary-color2: #372773;
+
+$d-blue: #48515d;
+
+
+
+
+$hover: #5ec8d4;
+
+
+
+$bold:Helvetica_bold;
+$normal: 'Noto Sans', Helvetica_normal, Arial, sans-serif;
+
+@font-face{
+  font-family: Helvetica_normal;
+  src: url(../fonts/HelveticaNeueLTPro-Lt.otf);
+  font-weight: 400;
+}
+@font-face{
+  font-family: Helvetica_bold;
+  src: url(../fonts/HelveticaNeueLTPro-Bd.otf);
+  font-weight: 400;
+}

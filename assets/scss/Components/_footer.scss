@@ -1,0 +1,133 @@
+/*=============---------------------------==============*/
+/*               	  Footer Area                       */
+/*=============---------------------------==============*/
+footer{
+    background: $white;
+
+    .footer-top{
+        background: #35838838;
+
+        .footer_top_menu{
+            list-style: none;
+            display: block;
+            text-align: center;
+
+            @media (max-width: 991px) {display: none;}
+
+            li{
+                position: relative;
+                display: inline-block;
+
+                &::after{
+                    position: absolute;
+                    content: '';
+                    width: 1px;
+                    height: 20px;
+                    top: 50%;
+                    right: 10px;
+                    background: $white;
+                    transform: translate(0, -50%);
+                }
+                
+                &:last-child:after{
+                    background-color: transparent;
+                }
+
+                a{
+                    font-size: 16px;
+                    display: inline-block;
+                    text-transform: uppercase;
+                    color: $white;
+                    font-weight: 400;
+                    padding: 20px 26px;
+
+                    &:first-child{
+                        padding-left: 0;
+                    }
+
+                }
+            }
+        }
+        .footer_top_menu_select{
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 18px;
+            background: $n-black;
+            color: $white;
+            display: none;
+            margin: 10px 0;
+            text-align: center;
+            //responsive
+            @media (max-width: 991px) {display: block;}
+        }
+    }
+    .footer-middle{
+
+        .follow_area{
+            position: relative;
+            padding: 20px 0;            
+            //Responsive
+            @media (max-width: 991px) {text-align: center;}
+
+            h2{font-size: 18px;font-weight: 400;text-transform: uppercase;font-family: $normal;display: inline-block; vertical-align: top; margin: 12px 0;}
+            .social_links{
+                display: inline-block;
+                position: relative;
+
+                li{
+                    display: inline-block;
+
+                    a{
+                        display: inline-block;
+                        font-size: 25px;
+                        color: $white;
+                        width: 45px;
+                        height: 45px;
+                        text-align: center;
+                        line-height: 45px;
+                        margin: 2px;
+
+                        &.facebook{background: #3b5998;}
+                        &.twitter{background: #598dca;}
+                        &.whatsapp{background: #65bc54;}
+                        &.play{background: #598dca;}
+                    }
+                }
+            }
+        }
+        .payment_accept_area{
+            position: relative;
+            padding: 20px 0;
+            //Responsive
+            @media (max-width: 991px) {text-align: center;}
+
+
+            h2{font-size: 18px;font-weight: 400;text-transform: uppercase;font-family: $normal;display: inline-block;margin:14px 0; vertical-align: top;}
+            .payment-img{width: auto; display: inline-block;padding: 10px 0;}
+        }
+    }
+    .footer-bottom{
+        background: $primary-color;
+        color: $white;
+        h2{
+            font-size: 16px;
+            font-family: $normal; 
+            text-align: center;
+            color: $white;
+            letter-spacing: 2px;
+            margin: 0;
+            padding: 10px;
+            font-weight: 400;
+
+            a{
+                color: $white;
+                font-weight: 600;
+
+                &:hover{
+                    color: $black;
+                }
+            }
+        }
+    }
+}

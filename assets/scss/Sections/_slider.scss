@@ -1,0 +1,373 @@
+//Home Page Main Slider 
+.main-slider-area{
+    position: relative;
+    background: $n-white;
+    z-index: 5;
+    padding: 40px 0;
+
+    .main_slider{
+        position: relative;
+        margin: 0;
+
+        &:hover .owl-nav{
+            opacity: 1;            
+        }
+
+        .single-slider-items{
+            height: 280px;
+            background-color: $n-white;
+            background-position: center;
+            background-size: cover;
+            padding: 30px 70px;
+
+            &.slider-img1{background-image: url(../img/Icon/slider-bg1.jpg)}
+            &.slider-img2{background-image: url(../img/Icon/slider-bg2.jpg)}
+            &.slider-img3{background-image: url(../img/Icon/slider-bg3.jpg)}
+            &.slider-img4{background-image: url(../img/Icon/slider-bg1.jpg)}
+
+            .browse-btn{
+                padding: 5px 20px;
+                background: $white;
+                font-weight: 600;
+                color: $primary-color;
+                text-transform: capitalize; 
+                border-radius: 3px;
+                -webkit-border-radius: 3px;
+                -moz-border-radius: 3px;
+                -ms-border-radius: 3px;
+                -o-border-radius: 3px;
+            }
+        }
+
+        //SliderNav
+        .owl-nav{
+            position: absolute;
+            top: 50%;
+            left:0px;
+            transform:translate(0, -50%);
+            -webkit-transform:translate(0, -50%);
+            -moz-transform:translate(0, -50%);
+            -ms-transform:translate(0, -50%);
+            -o-transform:translate(0, -50%);
+            width: 100%;
+            opacity: 0;
+            @include transition();
+
+            button{
+                border: none;
+                background: rgba($black, 0.6);
+                color: $white;
+                height: 40px;
+                width: 40px;
+                position: absolute;
+                top: 0;
+                left: 50px;
+                transform:translate(0, -50%);
+                -webkit-transform:translate(0, -50%);
+                -moz-transform:translate(0, -50%);
+                -ms-transform:translate(0, -50%);
+                -o-transform:translate(0, -50%);
+
+                &.owl-next{
+                    left: auto;
+                    right: 50px;
+                }
+            }
+        }
+        .owl-dots{
+            position: absolute;
+            bottom: 30px;
+            width: 100%;
+            text-align: center;
+
+            .owl-dot{
+                padding: 0;
+                margin: 2px;
+                border: none;
+                width: 15px;
+                height: 15px;
+                display: inline-block;
+                background: $white;
+                position: relative;
+                @include box-shadow2();
+
+                &.active:after{
+                    background-color: $primary-color;
+                }
+
+                &:after{
+                    position: absolute;
+                    content: '';
+                    width: 3px;
+                    height: 3px;
+                    background: $n-black;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    -webkit-transform: translate(-50%, -50%);
+                    -moz-transform: translate(-50%, -50%);
+                    -ms-transform: translate(-50%, -50%);
+                    -o-transform: translate(-50%, -50%);
+                }
+            }
+        }
+    }
+}
+
+//Top Catagory Slider
+.top-catagory-area{
+    position: relative;
+    background: $white;
+    padding: 40px 0;
+
+    .slider-area{
+        border: 1px solid $border;
+        padding: 10px;
+
+        h2{
+            padding: 0 15px; 
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+
+        .browse_catagory-slider{
+            margin: 0;
+
+            .single-slider-items{
+                margin-bottom: 30px;
+
+                .slider-content{
+                    display: inline-block;
+                    width: 100%;
+                    box-shadow: 1px 1px 1px 1px #ccc;
+
+                    &:hover h2{
+                        color: $primary-color;
+                        border-bottom-color: $primary-color;
+                    }
+
+                    .slider-img{
+                        width: 100%;
+                        height: 160px;
+                    }
+                
+                    h2{
+                        font-size: 16px;
+                        margin:0;
+                        padding: 15px;
+                        text-align: center;
+                        display: block;
+                        border-bottom: 3px solid transparent;
+                        @include transition();
+                    }
+                }
+            }
+            //owl-nav
+            .owl-nav{
+                position: absolute;
+                top: calc( 50% - 20px );
+                left:0px;
+                transform:translate(0, -50%);
+                -webkit-transform:translate(0, -50%);
+                -moz-transform:translate(0, -50%);
+                -ms-transform:translate(0, -50%);
+                -o-transform:translate(0, -50%);
+                width: 100%;
+                @include transition();
+    
+                button{
+                    background: $white;
+                    color: $black;
+                    border: 1px solid $border;
+                    height: 80px;
+                    width: 40px;
+                    position: absolute;
+                    top: 0;
+                    left:-11px;
+                    transform:translate(0, -50%);
+                    -webkit-transform:translate(0, -50%);
+                    -moz-transform:translate(0, -50%);
+                    -ms-transform:translate(0, -50%);
+                    -o-transform:translate(0, -50%);
+    
+                    &.owl-next{
+                        left: auto;
+                        right: -11px;
+                    }
+                }
+            }    
+        }
+    }
+}
+
+//Home Page Slider
+.home_catagory-slider{
+    position: relative;
+    padding: 40px 0;
+
+    //colorful
+    &.orange{
+        background-color: $orange;
+        h2{color: $white;}
+        .slider-content a.title{color: $black !important;
+            &:hover{color: $orange !important}
+        }
+    }
+    &.green{
+        background-color: $green;
+        h2{color: $white;}
+    
+        .slider-content a.title{color: $black !important;
+            &:hover{color: $green !important}
+
+        }
+    }
+    
+//slider-style
+    h2.catagory-title{
+        position: relative;
+        margin-bottom: 30px;
+        text-align: center;
+        text-transform: capitalize;
+        font-size: 30px;
+        font-weight: 700;
+        padding-bottom: 15px;
+
+        &:after{
+            position: absolute;
+            width: 200px;
+            height: 3px;
+            background: $black;
+            content: '';
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 50%);
+            z-index: 5;
+        }
+
+        &:before{
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background: $white;
+            content: '';
+            bottom: 0px;
+            left: 50%;
+            z-index: 6;
+            transform: translate(-50%, 50%);
+        }
+
+    }
+    .catagory-slider{
+        position: relative;
+        margin: 0;
+        padding: 0;
+
+        .single-slider-items{
+
+            .single-items{
+                border: 1px solid $n-border;
+                overflow: hidden;
+                margin-bottom: 10px;
+                background: rgba(232, 232, 232, 0.7);
+                position: relative;
+                z-index: 2;
+                @include transition();
+
+                &:hover{
+                    border-color: #d5d5d5;
+                    background: $white;
+                }
+
+                span.offer{
+                    color: $white;
+                    background: $red;
+                    display: inline-block;
+                    position: absolute;
+                    width: 50px;
+                    height: 50px;
+                    line-height: 12px;
+                    font-size: 12px;
+                    text-align: center;
+                    font-weight: 900;
+                    padding: 13px 12px;
+                    z-index: 6;
+                    top: 20px;
+                    right: 20px;
+                    border-radius: 50%;
+
+                }
+                .slider-image{
+                    margin: 20px;
+                    display: inline-block;
+                    background: $n-white;
+                }
+                .slider-content{
+                    border-top: 1px solid #d5d5d5;
+
+                    a.title{
+                        text-align: center;
+                        font-size: 18px;
+                        color: $primary-color;
+                        padding: 20px;
+                        padding-bottom: 0;
+                        display: inline-block;
+                        text-transform: capitalize;
+                        &:hover{color: $green}
+                    }
+                    h4.price{
+                        padding: 20px;
+                        text-transform: capitalize;
+                        font-size: 16px;
+                        margin: 0px;
+
+                        samp{
+                            font-size: 16px;
+                            text-decoration: line-through;
+                            color: $black;
+                            margin-right: 5px;
+                            background: transparent;
+                        }
+                    }
+                }
+            }
+        }
+        
+        //owl-nav
+        .owl-nav{
+            position: absolute;
+            top: 50%;
+            left:0px;
+            transform:translate(0, -50%);
+            -webkit-transform:translate(0, -50%);
+            -moz-transform:translate(0, -50%);
+            -ms-transform:translate(0, -50%);
+            -o-transform:translate(0, -50%);
+            width: 100%;
+            @include transition();
+
+            button{
+                background: $green;
+                color: $white;
+                border: 1px solid $border;
+                height: 40px;
+                width: 40px;
+                position: absolute;
+                top: 0;
+                left:10px;
+                transform:translate(0, -50%);
+                -webkit-transform:translate(0, -50%);
+                -moz-transform:translate(0, -50%);
+                -ms-transform:translate(0, -50%);
+                -o-transform:translate(0, -50%);
+
+                &:hover{background-color: #000000}
+
+                &.owl-next{
+                    left: auto;
+                    right: 10px;
+                }
+            }
+        }    
+    }
+}
